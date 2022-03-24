@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Firebase_Authentication_Tutorial.iml" filepath="$PROJECT_DIR$/.idea/modules/Firebase_Authentication_Tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Firebase_Authentication_Tutorial.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Firebase_Authentication_Tutorial.app.iml" />
+    </modules>
+  </component>
+</project>
