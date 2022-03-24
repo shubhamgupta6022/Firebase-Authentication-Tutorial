@@ -3,6 +3,7 @@ package com.example.firebaseauthenticationtutorial
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firebaseauthenticationtutorial.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -50,19 +51,24 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun registerUser(email: String, password: String) {
+        binding.progressbar.visibility = View.VISIBLE
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
+                binding.progressbar.visibility = View.GONE
                 if (task.isSuccessful) {
-                    //Register success
-                    val intent = Intent(this, HomeActivity::class.java).apply {
-                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    }
-                    startActivity(intent)
+                    login()
                 } else {
                     task.exception?.message?.let {
                         toast(it)
                     }
                 }
             }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        mAuth.currentUser?.let {
+            login()
+        }
     }
 }
