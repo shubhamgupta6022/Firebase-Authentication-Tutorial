@@ -64,7 +64,7 @@
                     android:drawableLeft="@drawable/ic_email"
                     android:drawablePadding="16dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    tools:text="probelalkhan@gmail.com" />
+                    tools:text="sgupta6022@gmail.com" />
 
                 <TextView
                     android:id="@+id/text_not_verified"
@@ -88,7 +88,7 @@
                     android:drawablePadding="16dp"
                     android:enabled="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    tools:text="+917549161079" />
+                    tools:text="+918195064422" />
 
                 <TextView
                     android:id="@+id/text_password"
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginBottom="20dp"
-                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawableLeft="@drawable/ic_lock"
                     android:drawablePadding="16dp"
                     android:enabled="true"
                     android:text="Change Password"
