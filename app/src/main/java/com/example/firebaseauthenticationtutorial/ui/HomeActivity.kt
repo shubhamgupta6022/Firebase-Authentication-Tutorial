@@ -1,4 +1,4 @@
-package com.example.firebaseauthenticationtutorial
+package com.example.firebaseauthenticationtutorial.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.example.firebaseauthenticationtutorial.R
 import com.example.firebaseauthenticationtutorial.databinding.ActivityHomeBinding
+import com.example.firebaseauthenticationtutorial.logout
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {

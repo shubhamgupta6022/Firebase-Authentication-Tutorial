@@ -3,6 +3,8 @@ package com.example.firebaseauthenticationtutorial
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import com.example.firebaseauthenticationtutorial.ui.HomeActivity
+import com.example.firebaseauthenticationtutorial.ui.LoginActivity
 
 fun Context.toast(message: String) =
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

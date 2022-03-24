@@ -1,4 +1,4 @@
-package com.example.firebaseauthenticationtutorial
+package com.example.firebaseauthenticationtutorial.ui.fragments
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -12,8 +12,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
+import com.example.firebaseauthenticationtutorial.R
 import com.example.firebaseauthenticationtutorial.databinding.FragmentProfileBinding
+import com.example.firebaseauthenticationtutorial.toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.storage.FirebaseStorage
@@ -103,6 +106,11 @@ class ProfileFragment : Fragment() {
                     context?.toast(it.exception?.message!!)
                 }
             }
+        }
+
+        binding.textPhone.setOnClickListener {
+            val action = ProfileFragmentDirections.actionVerifyPhone()
+            Navigation.findNavController(it).navigate(action)
         }
     }
 

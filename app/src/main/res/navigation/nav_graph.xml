@@ -7,12 +7,24 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.firebaseauthenticationtutorial.HomeFragment"
+        android:name="com.example.firebaseauthenticationtutorial.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.firebaseauthenticationtutorial.ProfileFragment"
+        android:name="com.example.firebaseauthenticationtutorial.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/actionVerifyPhone"
+            app:destination="@id/verifyPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyPhoneFragment"
+        android:name="com.example.firebaseauthenticationtutorial.ui.fragments.VerifyPhoneFragment"
+        android:label="Verify Phone">
+        <action
+            android:id="@+id/actionPhoneVerified"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

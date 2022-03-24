@@ -1,25 +1,28 @@
-package com.example.firebaseauthenticationtutorial
+package com.example.firebaseauthenticationtutorial.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
-import com.example.firebaseauthenticationtutorial.databinding.ActivityLoginBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.example.firebaseauthenticationtutorial.databinding.ActivityRegisterBinding
+import com.example.firebaseauthenticationtutorial.login
+import com.example.firebaseauthenticationtutorial.toast
 import com.google.firebase.auth.FirebaseAuth
 
-class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+
+class RegisterActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRegisterBinding
     private lateinit var mAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
         mAuth = FirebaseAuth.getInstance()
 
-        binding.buttonSignIn.setOnClickListener {
+        binding.buttonRegister.setOnClickListener {
             val email = binding.textEmail.text.toString().trim()
             val password = binding.editTextPassword.text.toString().trim()
 
@@ -41,20 +44,19 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            loginUser(email, password)
+            registerUser(email, password)
         }
 
-        binding.textViewRegister.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+        binding.textViewLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
-
     }
 
-    private fun loginUser(email: String, password: String) {
+    private fun registerUser(email: String, password: String) {
         binding.progressbar.visibility = View.VISIBLE
-        mAuth.signInWithEmailAndPassword(email, password)
+        mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
-                binding.progressbar .visibility = View.GONE
+                binding.progressbar.visibility = View.GONE
                 if (task.isSuccessful) {
                     login()
                 } else {
@@ -65,11 +67,10 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    // If user is already logged in, redirect to home page
     override fun onStart() {
         super.onStart()
         mAuth.currentUser?.let {
-            login()             // it will open the home page
+            login()
         }
     }
 }
