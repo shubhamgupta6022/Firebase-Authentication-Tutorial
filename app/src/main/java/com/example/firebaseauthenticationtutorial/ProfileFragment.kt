@@ -94,6 +94,16 @@ class ProfileFragment : Fragment() {
                     }
                 }
         }
+
+        binding.textNotVerified.setOnClickListener {
+            currentUser?.sendEmailVerification()?.addOnCompleteListener {
+                if (it.isSuccessful) {
+                    context?.toast("Verification email sent")
+                } else {
+                    context?.toast(it.exception?.message!!)
+                }
+            }
+        }
     }
 
     private fun takePictureIntent() {
