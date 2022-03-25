@@ -13,8 +13,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-125" />
+                            <option name="y" value="196" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -25,13 +25,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="253" />
+                            <option name="y" value="-140" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_profileFragment_to_verifyPhoneFragment2">
+                            <entry key="actionVerifyPhone">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_profileFragment_to_updateEmailFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -41,7 +46,28 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="verifyPhoneFragment2">
+                  <entry key="updateEmailFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="17" />
+                            <option name="y" value="-217" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_updateEmailFragment_to_profileFragment2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="verifyPhoneFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -52,7 +78,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_verifyPhoneFragment2_to_profileFragment">
+                            <entry key="actionPhoneVerified">
                               <value>
                                 <LayoutPositions />
                               </value>

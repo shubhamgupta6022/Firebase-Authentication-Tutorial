@@ -18,6 +18,9 @@
         <action
             android:id="@+id/actionVerifyPhone"
             app:destination="@id/verifyPhoneFragment" />
+        <action
+            android:id="@+id/actionUpdateEmail"
+            app:destination="@id/updateEmailFragment" />
     </fragment>
     <fragment
         android:id="@+id/verifyPhoneFragment"
@@ -25,6 +28,14 @@
         android:label="Verify Phone">
         <action
             android:id="@+id/actionPhoneVerified"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEmailFragment"
+        android:name="com.example.firebaseauthenticationtutorial.ui.fragments.UpdateEmailFragment"
+        android:label="Update Email" >
+        <action
+            android:id="@+id/actionEmailUpdated"
             app:destination="@id/profileFragment" />
     </fragment>
 </navigation>
