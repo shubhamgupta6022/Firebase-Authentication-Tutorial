@@ -31,12 +31,17 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="actionUpdateEmail">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="actionVerifyPhone">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_profileFragment_to_updateEmailFragment">
+                            <entry key="action_profileFragment_to_updatePasswordFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -57,7 +62,28 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_updateEmailFragment_to_profileFragment2">
+                            <entry key="actionEmailUpdated">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="updatePasswordFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="540" />
+                            <option name="y" value="-358" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_updatePasswordFragment_to_profileFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -72,8 +98,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="504" />
-                            <option name="y" value="18" />
+                            <option name="x" value="498" />
+                            <option name="y" value="202" />
                           </Point>
                         </option>
                         <option name="myPositions">

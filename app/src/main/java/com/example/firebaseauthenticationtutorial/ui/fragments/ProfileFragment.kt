@@ -117,6 +117,11 @@ class ProfileFragment : Fragment() {
             val action = ProfileFragmentDirections.actionUpdateEmail()
             Navigation.findNavController(it).navigate(action)
         }
+
+        binding.textPassword.setOnClickListener {
+            val action = ProfileFragmentDirections.actionUpdatePassword()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
     private fun takePictureIntent() {
